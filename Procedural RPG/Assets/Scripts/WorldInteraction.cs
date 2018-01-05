@@ -25,7 +25,8 @@ public class WorldInteraction : MonoBehaviour {
             GameObject interactedObject = interactionInfo.collider.gameObject;
             if(interactedObject.tag == "Interactable")
             {
-                Debug.Log("It is interactable");
+                
+                interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
             }
             else
             {
